@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <title>BREAST CANCER RESULT</title>
+</head>
+<style>
+body{
+    margin: 0;
+    font-family: Arial;
+    font-size: 21px;
+}
+#myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    background-size: cover;
+}
+.result {
+    position: absolute;
+    bottom: 90px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 11px;
+}
+
+</style>
+<body>
+    <video autoplay muted loop id="myVideo">
+		<source src="static/vdo.mp4" type="video/mp4">
+	  </video>
+    <div class ="result">
+    <h1 style="color: red;text-align : center"><u>Breast Cancer Diagnosis</u></h1>
+    <p style="color: white; text-align : center""><b>Please find the diagnosis for the breat cancer below:<b></p>
+    
+    <div class ="container">
+    <h1 style="text-align : center">
+        {{prediction_text}}
+    </h1>
+    <h3 style="text-align : center"> Information about Breast Cancer:</h3>
+    <p style="text-align: center;">Benign (non-cancerous) :breast conditions are unusual growths or other changes<br>
+                                   in the breast tissue that are not cancer. Having a benign breast condition can<br>
+                                   be scary at first because the symptoms often mimic those caused by breast cancer.</p>
+<p style="text-align: center;">Malignant Tumors: Cancerous. Once breast cancer has spread to the lymph nodes, the cancer<br>
+                                                  cells can travel to other areas of the body, like the liver or bones.<br>
+                                                   The breast cancer cells can then form tumors in those locations. A biopsy<br>
+                                                    of these tumors might show characteristics of the original breast cancer tumor.</p>
+</div>
+</div>
+</body>
+</html>
